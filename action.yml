@@ -1,0 +1,6 @@
+name: kubectl-verify-jobs
+description: "This action checks a job run success"
+author: 'Peter Varga'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
