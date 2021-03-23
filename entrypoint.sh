@@ -12,7 +12,7 @@ result="$(kubectl get job "$*" -o jsonpath={.status.succeeded})"
 while [  "$result" = "0" -a $counter -lt 4 ]
 do
   sleep 5
-  result="$(kubectl get job challenge-migration -o jsonpath={.status.succeeded})"
+  result="$(kubectl get job "$*" -o jsonpath={.status.succeeded})"
   ((counter++))
   echo $counter
   echo "$result"
